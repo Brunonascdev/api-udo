@@ -2,12 +2,14 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const axios = require("axios");
 const qs = require("qs");
+const bodyParser = require("body-parser");
 
 const hbs = require("nodemailer-express-handlebars");
 
 const app = express();
 
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const createMail = (email, type) => {
   const transporter = nodemailer.createTransport({
@@ -67,6 +69,8 @@ const createMail = (email, type) => {
 
 app.post("/", (req, res) => {
   const { email, type, name } = req.body;
+
+  console.log(email, name);
 
   axios({
     method: "post",
