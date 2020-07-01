@@ -67,8 +67,9 @@ const createMail = (email, type) => {
   });
 };
 
-app.post("/", (req, res) => {
-  const { email, type, name } = req.body;
+app.post("/:type", (req, res) => {
+  const { email, name } = req.body;
+  const { type } = req.params;
 
   console.log("[EMAIL, NAME E TYPE ==>]", email, name, type);
 
