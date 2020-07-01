@@ -70,7 +70,7 @@ const createMail = (email, type) => {
 app.post("/", (req, res) => {
   const { email, type, name } = req.body;
 
-  console.log(email, name);
+  console.log("[EMAIL, NAME E TYPE ==>]", email, name, type);
 
   axios({
     method: "post",
