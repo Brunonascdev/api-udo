@@ -87,7 +87,9 @@ app.post("/:type", (req, res) => {
 
   createMail(email, type);
 
-  return res.status(200).json({ success: "ok" });
+  return res
+    .status(200)
+    .redirect(`https://www.udobrasil.net.br/thankyou${type}.html`);
 });
 
 app.listen(3000, (req, res) => {
