@@ -18,7 +18,7 @@
     "nodemailer": "^6.4.10",
     "nodemailer-express-handlebars": "^4.0.0",
     "pug": "^3.0.0",
-    "qs": "^6.9.4"
+    "qs": "^6.9.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
